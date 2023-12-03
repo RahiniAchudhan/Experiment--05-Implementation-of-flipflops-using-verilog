@@ -108,131 +108,76 @@ Q(t+1)=T′Q(t)+TQ(t)′
 
 ### PROGRAM 
 
-## PROGRAM 1:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
 
-```
-module sr (q,qbar,s,r,clk);
-input s,r,clk;
-output q,qbar;
-wire nand1_out;
-wire nand2_out;
-nand(nand1_out,clk,s);
-nand(nand2_out,clk,r);
-nand(q,nand1_out,qbar);
-nand(qbar,nand2_out,q);
-endmodule
+Developed by: A.Rahini
 
-```
+Register Number: 23012479
 
-## PROGRAM 2:
+##code:
 
-```
-module d(q,qbar,d1,clk);
-input d1,clk;
-output q,qbar;
-wire n1;
-wire n2;
-not(x,d1);
-nand(n1,clk,d1);
-nand(n2,clk,x);
-nand(q,n2,qbar);
-nand(qbar,n1,q);
-endmodule 
+# SR Flip Flop:
 
-```
-
-## PROGRAM 3:
-
-```
-module jk(q,qbar,k,j,clk);
-input j,k,clk;
-output q,qbar;
-wire nand1_out;
-wire nand2_out;
-nand(nand1_out,j,clk,qbar);
-nand(nand2_out,k,clk,q);
-nand(q,nand1_out,qbar,qbar);
-nand(qbar,nand2_out,q);
-endmodule
-
-```
-
-## PROGRAM 4:
-
-```
-module tff(t,qbar,q,clk);
-input t,clk;
-output q,qbar;
-wire n1,n2;
-nand(n1,t,clk,qbar);
-nand(n2,clk,t,q);
-nand(q,n1,qbar);
-nand(qbar,n2,q);
-endmodule
-```
+![sr flipflop program](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/7f0390ac-58d1-4e32-8538-05d6ba97878c)
 
 
-### RTL VIEW:
+# JK Flip Flop:
 
-## SR FLIP FLOP RTL VIEW:
+![jk flipflop program](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/34db5372-424c-4786-b450-35644445e87c)
 
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/bad1a500-e147-4fd9-84c6-c60791f6b3c2)
 
-## D FLIP FLOP RTL VIEW:
+# D Flip Flop:
 
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/ac56011b-910b-467a-97a1-18f013cf6fb6)
 
-## JK FLIP FLOP VIEW:
+![d flipflop program](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/a7011018-9685-4ae9-a811-26751ea5cd7d)
 
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/5a610fcf-2194-4640-ad6c-73b38a5a32da)
+# T Flip Flop:
 
-## T FLIP FLOP RTL VIEW:
+![t flipflop program](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/1cec44b1-7d7c-447b-b42d-798455851e6b)
 
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/d369e87b-2f74-4917-a32f-e9647338257c)
+
+# RTL Diagram:
+
+#SR Flip  Flop:
+
+
+![sr flipflop rtl](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/a919b6a9-922c-41d9-b133-a616402beefd)
+
+# JK Flip Flop:
+
+![jk flipflop rtl](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/93100912-ce57-4547-9e31-f4f161c2c7b3)
+
+
+# D Flip Flop:
+
+![d flipflop rtl](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/49eecaeb-061c-449b-a7ac-2a4b4fb5852b)
+
+# T Flip Flop:
+
+![t flipflop rtl](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/704ae717-f118-4980-a125-7026db96e40d)
+
+
+# Output:
+
+
+# SR Flip Flop:
+
+![sr flipflop wae](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/c15d8bcc-1c78-4534-8232-29b1d30ca807)
+
+# JK FLip Flop:
+
+![jk flipflop wave](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/71b5fe53-9575-410e-aa97-cd2064bf9ced)
+
+# D Flip Flop:
 
 
 
-## SR FLIP FLOP OUTPUT:
-
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/831e24a4-d13c-4047-9fcc-9b2e74845906)
-
-## D FLIP FLOP OUTPUT:
-
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/17836928-e434-4c56-8e98-c4f18026d077)
-
-## JK FLIP FLOP OUTPUT:
-
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/83184265-9780-4c64-97a6-10eea59d340d)
+![d flipflop wae](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/077000e6-ecaf-44f7-85ee-df7a15191049)
 
 
-## T FLIP FLOP OUTPUT:
+# T Flip Flop:
 
-![image](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/e1826449-b816-4d52-9bed-98eec345ae74)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![t flipflop wave](https://github.com/RahiniAchudhan/Experiment--05-Implementation-of-flipflops-using-verilog/assets/145742838/9055d603-105a-4a9d-a141-06226d75fbcd)
 
 
 ### RESULTS :
